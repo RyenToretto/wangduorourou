@@ -16,6 +16,12 @@ speed-measure-plugin*.json
 
 # IDEs and editors
 /.idea
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 .project
 .classpath
 .c9/
@@ -36,8 +42,9 @@ speed-measure-plugin*.json
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 testem.log
 /typings
 
