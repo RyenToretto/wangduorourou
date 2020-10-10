@@ -18,6 +18,7 @@
   "homepage": "https://github.com/RyenToretto/wangduorourou",
   "scripts": {
     "ng": "ng",
+    "dev": "npm run start",
     "start": "ng serve --port 8888",
     "clean": "rm -rf ./dist",
     "build": "ng build",
@@ -28,7 +29,7 @@
     "pack-first-ng-lib": "cd dist/kjf/first-ng-lib && npm pack",
     "install-first-ng-lib": "npm i ./dist/kjf/first-ng-lib/kjf-first-ng-lib-0.0.1.tgz",
     "package-first-ng-lib": "npm run clean && npm run build-first-ng-lib && npm run copy-assets-first-ng-lib && npm run copy-theme-first-ng-lib && npm run pack-first-ng-lib && npm run install-first-ng-lib",
-    "dev-first-ng-lib:watch": "ng build @kjf/first-ng-lib -- --watch",
+    "build-first-ng-lib:watch": "ng build @kjf/first-ng-lib -- --watch",
     "build-first-ng-lib:prod": "ng build @kjf/first-ng-lib --prod",
     "test": "ng test",
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
