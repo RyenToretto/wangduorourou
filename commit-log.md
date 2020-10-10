@@ -44,3 +44,12 @@
                       "node_modules/@kjf/first-ng-lib/theme/first-ng-lib.theme.scss"
                     ],
     angular.json 中需要添加
+
+#### 07. feat(@kjf/first-ng-lib): static resource
+        设置淘x,宝的是：
+        npm config set registry https://registry.npm.taobao.org
+        不想用他们的，再设置回原来的就可以了：
+        npm config set registry https://registry.npmjs.org
+
+    >npm config list
+    >npm adduser
