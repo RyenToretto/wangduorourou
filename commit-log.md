@@ -11,11 +11,10 @@
 
 #### 05. feat(build): package first ng lib
     ng g library @kjf/first-ng-lib --prefix kjf
-    
 
     // 1. 编译Lib库
-    // 说明: my-lib是你的Lib库的名字
-    // 编译的结果会放到dist/my-lib目录下(在ng-package.json文件中配置)
+    // 说明: @kjf/first-ng-lib 是你的Lib库的名字
+    // 编译的结果会放到dist/kjf/first-ng-lib目录下(在package.json文件中配置)
         "build-first-ng-lib": "ng build @kjf/first-ng-lib",
     // 2. 将编译之后的Lib库打包
     // 说明: `npm pack`会将你编译之后的代码打包成.tgz文件
