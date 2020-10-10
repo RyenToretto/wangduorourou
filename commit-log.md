@@ -6,5 +6,8 @@
     ng g m test-module
     ng g c test-module/first-test --prefix kjf
 
-#### 04. feat(init): first ng lib
-    ng g library first-ng-lib --prefix kjf
+#### 04. feat(ng-packagr): npm install -D ng-packagr
+    npm install -D ng-packagr
+
+#### 05. feat(init): first ng lib
+    ng g library @kjf/first-ng-lib --prefix kjf

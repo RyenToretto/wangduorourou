@@ -1,27 +1,39 @@
-# Wangduorourou
+### NgxCategorySelector
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
-## Development server
+#### Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm i @kjf/first-ng-lib`
 
-## Code scaffolding
+#### API
+`import {FirstNgLib} from '@kjf/first-ng-lib';`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Selector: `kjf-first-ng-lib`
 
-## Build
+#### @Inputs()
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+| 输入Input            | Type            | Required                   | Description                                                                                               |
+| ---------------- | --------------- | -------------------------- | --------------------------------------------------------------------------------------------------------- |
+| data             | CategoryNode[ ] | **YES**                    | Array of CategoryNodes                                                |
 
-## Running unit tests
+#### @Outputs()
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| 输出Output           | Type         | Required | Description                                            |
+| ---------------- | ------------ | -------- | ------------------------------------------------------ |
+| selection        | CategoryNode | **YES**  | Emits the selected category node                       |
 
-## Running end-to-end tests
+#### Development server
+ 1. run `npm run build-first-ng-lib`. This will auto rebuild the lib on changes.       
+ 2. 运行 `ng serve` 启动服务器，`http://localhost:8888/`.
+ 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### License & Postcardware
+该软件包是完全免费的（使用MIT许可证），该软件包也被许可为明星软件。 这意味着，如果将它用于您的生产环境，将不胜感激收到您产品的明信片。
+The package is completely free (MIT license) to use, however the package is licensed as Postcardware. This means that if it makes it to your production environment, we would very much appreciate receiving a postcard from your hometown.
 
-## Further help
+**寇剑峰**,
+2020-10-10
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### thanks
+ [RZdesign](https://github.com/zr87/ngx-category-selector)
