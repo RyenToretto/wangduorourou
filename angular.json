@@ -3,48 +3,126 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "first-ng-lib": {
-      "projectType": "library",
-      "root": "projects/first-ng-lib",
-      "sourceRoot": "projects/first-ng-lib/src",
-      "prefix": "kjf",
+    "wangduorourou": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "tsConfig": "projects/first-ng-lib/tsconfig.lib.json",
-            "project": "projects/first-ng-lib/ng-package.json"
+            "outputPath": "dist/wangduorourou",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/first-ng-lib/tsconfig.lib.prod.json"
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "wangduorourou:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "wangduorourou:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "wangduorourou:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/first-ng-lib/src/test.ts",
-            "tsConfig": "projects/first-ng-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/first-ng-lib/karma.conf.js"
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/first-ng-lib/tsconfig.lib.json",
-              "projects/first-ng-lib/tsconfig.spec.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "wangduorourou:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "wangduorourou:serve:production"
+            }
+          }
         }
       }
     }},
-  "cli": {
-    "analytics": "1c5deb00-892d-4c43-8826-6c26abf29e50"
-  },
-  "defaultProject": "first-ng-lib"
+  "defaultProject": "wangduorourou"
 }
