@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CategoryNode} from '@kjf/first-ng-lib';
+import {CategoryNode} from '../../../../projects/kjf/first-ng-lib/src/lib/first-ng-lib.component'; // 开发环境
+// import {CategoryNode} from '@kjf/first-ng-lib'; // 生产环境
 
 @Component({
     selector: 'kjf-first-test',

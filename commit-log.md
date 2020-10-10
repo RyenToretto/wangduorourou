@@ -28,3 +28,19 @@
         "package-first-ng-lib": "npm run build-first-ng-lib && npm run pack-first-ng-lib && npm run install-first-ng-lib",
 
 #### 06. feat(@kjf/first-ng-lib): done with first ng lib
+
+#### 07. feat(@kjf/first-ng-lib): static resource
+                    "assets": [
+                      "src/favicon.ico",
+                      "src/assets",
+                      {
+                        "glob": "**/*",
+                        "input": "node_modules/@kjf/first-ng-lib/assets",
+                        "output": "assets"
+                      }
+                    ],
+                    "styles": [
+                      "src/styles.scss",
+                      "node_modules/@kjf/first-ng-lib/theme/first-ng-lib.theme.scss"
+                    ],
+    angular.json 中需要添加
