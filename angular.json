@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "@kjf/first-ng-lib": {
+      "projectType": "library",
+      "root": "projects/kjf/first-ng-lib",
+      "sourceRoot": "projects/kjf/first-ng-lib/src",
+      "prefix": "kjf",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/kjf/first-ng-lib/tsconfig.lib.json",
+            "project": "projects/kjf/first-ng-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/kjf/first-ng-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/kjf/first-ng-lib/src/test.ts",
+            "tsConfig": "projects/kjf/first-ng-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/kjf/first-ng-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/kjf/first-ng-lib/tsconfig.lib.json",
+              "projects/kjf/first-ng-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "wangduorourou",
