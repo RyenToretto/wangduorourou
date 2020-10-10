@@ -37,3 +37,5 @@ The package is completely free (MIT license) to use, however the package is lice
 
 #### thanks
  [RZdesign](https://github.com/zr87/ngx-category-selector)
+ 
+ Hello, first-ng-lib is copy from RZdesign 's ngx-category-selector, thank you very much !~

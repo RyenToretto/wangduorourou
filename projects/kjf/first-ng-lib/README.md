@@ -1,24 +1,39 @@
-# FirstNgLib
+### NgxCategorySelector
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
-## Code scaffolding
+#### Installation
 
-Run `ng generate component component-name --project @kjf/first-ng-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project first-ng-lib`.
-> Note: Don't forget to add `--project first-ng-lib` or else it will be added to the default project in your `angular.json` file. 
+`npm i @kjf/first-ng-lib`
 
-## Build
+#### API
+`import {FirstNgLib} from '@kjf/first-ng-lib';`
 
-Run `ng build @kjf/first-ng-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+Selector: `kjf-first-ng-lib`
 
-## Publishing
+#### @Inputs()
 
-After building your library with `ng build @kjf/first-ng-lib`, go to the dist folder `cd dist/kjf/first-ng-lib` and run `npm publish`.
+| 输入Input            | Type            | Required                   | Description                                                                                               |
+| ---------------- | --------------- | -------------------------- | --------------------------------------------------------------------------------------------------------- |
+| data             | CategoryNode[ ] | **YES**                    | Array of CategoryNodes                                                |
 
-## Running unit tests
+#### @Outputs()
 
-Run `ng test @kjf/first-ng-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| 输出Output           | Type         | Required | Description                                            |
+| ---------------- | ------------ | -------- | ------------------------------------------------------ |
+| selection        | CategoryNode | **YES**  | Emits the selected category node                       |
 
-## Further help
+#### Development server
+ 1. run `npm run build-first-ng-lib`. This will auto rebuild the lib on changes.       
+ 2. 运行 `ng serve` 启动服务器，`http://localhost:8888/`.
+ 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### License & Postcardware
+该软件包是完全免费的（使用MIT许可证），该软件包也被许可为明星软件。 这意味着，如果将它用于您的生产环境，将不胜感激收到您产品的明信片。
+The package is completely free (MIT license) to use, however the package is licensed as Postcardware. This means that if it makes it to your production environment, we would very much appreciate receiving a postcard from your hometown.
+
+**寇剑峰**,
+2020-10-10
+
+#### thanks
+ [RZdesign](https://github.com/zr87/ngx-category-selector)

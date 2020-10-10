@@ -1,11 +1,31 @@
 {
   "name": "@kjf/first-ng-lib",
   "version": "0.0.1",
+  "description": "kjf first ng lib",
+  "author": "koujianfeng <18273727925@163.com> (https://juejin.im/user/870468939679469)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyenToretto/wangduorourou"
+  },
+  "bugs": {
+    "url": "https://github.com/RyenToretto/wangduorourou/issues"
+  },
+  "homepage": "https://github.com/RyenToretto/wangduorourou",
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "kjf"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^10.1.5",
     "@angular/core": "^10.1.5"
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

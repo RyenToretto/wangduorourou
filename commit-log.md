@@ -26,3 +26,5 @@
     // 整合之后的命令: 最终只需要执行这一个命令即可
     // 说明: 每次Lib库有修改, 都需要重新执行这个命令
         "package-first-ng-lib": "npm run build-first-ng-lib && npm run pack-first-ng-lib && npm run install-first-ng-lib",
+
+#### 06. feat(@kjf/first-ng-lib): done with first ng lib
