@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "wangduorourou"
+    }
+  },
+  "defaultProject": "wangduorourou",
+  "cli": {
+    "analytics": "c98aa77f-2c56-44b7-b348-dab7bd7ca465"
+  }
 }
